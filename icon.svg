@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="chipGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="greenLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Dark rounded background -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+
+  <!-- Subtle grid lines in background -->
+  <line x1="0" y1="170" x2="512" y2="170" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <line x1="0" y1="342" x2="512" y2="342" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <line x1="170" y1="0" x2="170" y2="512" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <line x1="342" y1="0" x2="342" y2="512" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+
+  <!-- Glow orb top-right -->
+  <circle cx="380" cy="130" r="90" fill="url(#accentGrad)" opacity="0.12"/>
+  <!-- Glow orb bottom-left -->
+  <circle cx="130" cy="380" r="70" fill="#10b981" opacity="0.08"/>
+
+  <!-- Main credit card body -->
+  <rect x="68" y="148" width="376" height="240" rx="24" fill="url(#cardGrad)" filter="url(#cardShadow)"/>
+
+  <!-- Card shine overlay -->
+  <rect x="68" y="148" width="376" height="240" rx="24" fill="url(#accentGrad)" opacity="0.3"/>
+  <rect x="68" y="148" width="376" height="100" rx="24" fill="rgba(255,255,255,0.08)"/>
+  <rect x="68" y="222" width="376" height="26" fill="rgba(0,0,0,0.15)"/>
+
+  <!-- EMV Chip -->
+  <rect x="106" y="178" width="56" height="42" rx="8" fill="url(#chipGrad)"/>
+  <rect x="112" y="184" width="44" height="30" rx="5" fill="none" stroke="rgba(0,0,0,0.25)" stroke-width="1.5"/>
+  <line x1="106" y1="199" x2="162" y2="199" stroke="rgba(0,0,0,0.2)" stroke-width="1.5"/>
+  <line x1="134" y1="178" x2="134" y2="220" stroke="rgba(0,0,0,0.2)" stroke-width="1.5"/>
+
+  <!-- NFC waves icon top-right of card -->
+  <path d="M368 172 Q390 185 390 199 Q390 213 368 226" stroke="rgba(255,255,255,0.5)" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M378 179 Q394 190 394 199 Q394 208 378 219" stroke="rgba(255,255,255,0.3)" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Card number dots -->
+  <circle cx="118" cy="280" r="5" fill="rgba(255,255,255,0.7)"/>
+  <circle cx="132" cy="280" r="5" fill="rgba(255,255,255,0.7)"/>
+  <circle cx="146" cy="280" r="5" fill="rgba(255,255,255,0.7)"/>
+  <circle cx="160" cy="280" r="5" fill="rgba(255,255,255,0.7)"/>
+
+  <circle cx="192" cy="280" r="5" fill="rgba(255,255,255,0.7)"/>
+  <circle cx="206" cy="280" r="5" fill="rgba(255,255,255,0.7)"/>
+  <circle cx="220" cy="280" r="5" fill="rgba(255,255,255,0.7)"/>
+  <circle cx="234" cy="280" r="5" fill="rgba(255,255,255,0.7)"/>
+
+  <!-- Last 4 digits visible -->
+  <text x="266" y="288" font-family="monospace" font-size="22" font-weight="700" fill="rgba(255,255,255,0.9)" letter-spacing="4">5274</text>
+
+  <!-- Bottom bar of card -->
+  <rect x="86" y="340" width="100" height="6" rx="3" fill="rgba(255,255,255,0.3)"/>
+  <rect x="86" y="354" width="70" height="6" rx="3" fill="rgba(255,255,255,0.2)"/>
+
+  <!-- Rising trend chart line (bottom right of card) -->
+  <polyline points="300,365 322,352 345,358 368,338 390,320 412,310" stroke="url(#greenLine)" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Chart dots -->
+  <circle cx="412" cy="310" r="7" fill="#10b981"/>
+  <circle cx="412" cy="310" r="4" fill="#fff"/>
+
+  <!-- Up arrow inside chart dot area -->
+  <polygon points="412,296 420,310 404,310" fill="#10b981" opacity="0.7"/>
+
+  <!-- Small coin stack bottom-left outside card -->
+  <circle cx="100" cy="415" r="22" fill="#f59e0b" opacity="0.9"/>
+  <circle cx="100" cy="407" r="22" fill="#fbbf24"/>
+  <circle cx="100" cy="399" r="22" fill="#fcd34d"/>
+  <text x="100" y="406" font-family="serif" font-size="20" font-weight="900" text-anchor="middle" fill="#78350f">$</text>
+
+</svg>
